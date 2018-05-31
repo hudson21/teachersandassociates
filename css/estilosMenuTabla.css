@@ -1,0 +1,71 @@
+body{
+   font-family: Arial;
+   
+}
+
+/*ESTILOS GENERALES*/
+nav ul{
+	list-style:none;
+	padding:0;
+}
+
+nav li{
+    line-height: 3rem;
+    position: relative;
+
+}
+
+nav li ul{
+    position:absolute;
+}
+
+nav a{
+	color: #ddd;
+	display:block;
+	padding:0 2.5em;
+	text-decoration:none;
+	transition: .4s;
+}
+
+nav a:hover{
+	background: rgba(0,0,0,.5);
+}
+
+
+
+/*PRIMER NIVEL*/
+
+nav > ul{
+  background:#333;
+  display: table;
+  width:100%;
+}
+
+
+nav > ul >li{
+   float:left;
+}
+
+/*SEGUNDO NIVEL*/
+
+nav li li{
+	background: #222;
+	max-height:0;
+	transition: all .6s;
+	overflow: hidden;
+	width:190px;
+}
+
+nav li:hover> ul > li {
+	max-height: 500px;
+	overflow: visible;
+}
+
+nav > ul > li > ul{
+	top:100%;
+}
+/*TERCER NIVEL*/
+nav ul ul ul{
+	left: 100%;
+	top 0;
+}

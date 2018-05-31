@@ -1,0 +1,209 @@
+<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
+
+    
+
+    <link rel="stylesheet" type="text/css" href="css/estiloReservar.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <link rel="stylesheet" href="css/zerogrid.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/lightbox.css">
+  
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  
+
+  <link rel="stylesheet" href="css/menu.css">
+  <script src="js/jquery1111.min.js" type="text/javascript"></script>
+  <script src="js/script.js"></script>
+  
+
+	<title>RESERVACIÓN DE ASESORÍAS</title>
+
+	
+	<link rel="stylesheet" type="text/css" href="tcal.css" />
+	<script type="text/javascript" src="tcal.js"></script> 
+
+
+	<style>
+           
+            *{
+	           margin:0;
+	           padding:0;
+             }
+
+         body{
+	           font-family: 'Arial', sans-serif;
+	           margin:0;
+	           padding:0;
+	       	   background: url(black.jpg) no-repeat center center fixed;
+               -webkit-background-size: cover;
+               -moz-background-size: cover;
+               -o-background-size: cover;
+               background-size: cover;
+	         }
+           
+           form{
+           	margin: 0 auto;
+           }
+
+	     #contenedor{
+	     	width:30%;
+	     	margin:0 auto;
+	     	background-color:#2c2c2c;
+	     	padding: 30px;
+	     	position:center;
+	     }
+
+	     #contenedor h1{
+	     	font-size:24px;
+
+	     }
+
+	     #contenedor #form{
+	     	margin-top:20px;
+
+	     }
+
+	     #form p{
+	     	
+	     	margin-top:12px;
+	     	color:white;
+	     }
+
+	     .materia .profesor .turno{
+	     	margin-top:2px;
+	     	width:100%;
+	     	padding-left:5px;
+	     	padding-right:5px;
+	     	height: 35px;
+	     }
+
+	     button[type="submit"]{
+	     	width:75px;
+	     	height:30px;
+	     	color:#fff;
+	     	background:#144c83;
+	     	background: linear-gradient(#144c83, #23399A);
+	     	border:0;
+	     }
+
+	     button[type="submit"]:hover{
+	     	
+	     	background: linear-gradient(#de4e1c,#f04104);
+	     	color:#e7e7e7;
+	     	}
+         /*media queries para el responsive*/
+
+       /*Pantallas tablets*/
+         @media only screen and (min-width: 701px) and (max-width:980px){
+         	#contenedor{
+                   width: 60px;
+                   margin: 0 auto;
+         	}
+
+         }
+
+         /*Pantallas tablets*/
+         @media only screen and (min-width: 480px) and (max-width:700px){
+         	#contenedor{
+                   width: 80px;
+                   margin: 0 auto;
+         	}
+
+         }
+
+
+
+
+	</style>
+
+  <div class="header">
+      <div id='cssmenu' >
+        <ul>
+           <li class="last"><a href="index.html"><span>INICIO</span></a></li>
+           <li class="last"><a href="archive.html"><span>GALERÍA</span></a></li>
+           <li class="last"><a href="single.html"><span>SOBRE NOSOTROS</span></a></li>
+           <li class="last"><a href="login1.php"><span> MIEMBROS</span></a>
+                <ul>
+                      <li class="last"><a href="cerrarSesion.php"><span> CERRAR SESION</span></a></li>
+                      <li class="last"><a href="login1.php"><span> PERFIL</span></a></li>
+                </ul>
+           </li>
+           <li class="last"><a href="app/reportes/reporte_pdf.php" target="_blank"><span> ASESORÍAS DISPONIBLES</span></a></li>
+           <li class="active"><a href="reservacion.html"><span>RESERVACIÓN DE ASESORÍAS</span></a></li>
+           <li class="last"><a href="contact.html"><span>CONTÁCTANOS</span></a></li>
+           <li class="last"><a href="menuTablas.php"><span>REGISTROS</span></a></li>
+        </ul>
+      </div>
+    </div>
+
+</head>
+
+
+<body>
+
+
+
+<div id="contenedor">
+      <header>
+            <h1 style="margin-top:12px; color:white;" >RESERVACIÓN DE ASESORÍAS</h1>
+      </header>
+
+
+      <div id="form">
+	          <form action="reservar.php" method="post">
+		         
+	                 <p>Selecciona una Materia</p>
+	             <div class="materia">    
+		             <select name="materia">
+                           <option value="HISTORIA DE MÉXICO">HISTORIA DE MÉXICO</option> 
+                           <option value="CALCULO INTEGRAL">CALCULO INTEGRAL</option> 
+                           <option value="PROBABILIDAD Y ESTADÍSTICA">PROBABILIDAD Y ESTADÍSTICA</option>
+                           <option value="ECUACIONES DIFERENCIALES">ECUACIONES DIFERENCIALES</option> 
+                           <option value="INTELIGENCIA ARTIFICIAL">INTELIGENCIA ARTIFICIAL</option> 
+                           <option value="INGLÉS">INGLÉS</option> 
+                     </select>
+                 </div>
+                   <br>
+
+                         <p>Selecciona una Fecha</p>
+                         <input style="background-color:white;" type="text" name="date" class="tcal" value="" />
+                    <br>
+
+                     <p>Selecciona un Profesor</p>
+                  <div class="profesor">
+                     <select name="profesor">
+                           <option value="JULIO JIMÉNEZ APONTE">JULIO JIMÉNEZ APONTE</option> 
+                           <option value="JULIAN MARTÍNEZ">JULIAN MARTÍNEZ</option> 
+                           <option value="JOSE MANUEL OSORIO">JOSE MANUEL OSORIO</option>
+                           <option value="JUAN CAMACHO GONZÁLEZ">JUAN CAMACHO GONZÁLEZ</option> 
+                           <option value="RAFAEL ALDAMA HUERTA">RAFAEL ALDAMA HUERTA</option> 
+                           <option value="EDWIN ALMIRAN SÁNCHEZ">EDWIN ALMIRAN SÁNCHEZ</option> 
+                     </select>
+                   </div>
+
+                   <br>
+
+                   
+
+                     <p>Selecciona un Turno</p>
+                   <div class="turno">
+                     <select name="turno">
+                            <option value="VESPERTINO">VESPERTINO</option> 
+                            <option value="MATUTINO">MATUTINO</option> 
+         
+                    </select>
+                    <div>
+                    <br>
+
+                     <button type="submit" name="enviar">Reservar</button>
+
+              </form>
+     </div>  
+</div>
+</body>
+</html>
